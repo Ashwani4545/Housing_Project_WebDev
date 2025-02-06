@@ -1,0 +1,767 @@
+<html>
+<title> Griham Housing Company </title>
+
+<head>
+
+
+
+       <style>
+              body {
+                     font-family: Arial, Helvetica, sans-serif;
+              }
+
+              .flip-card1 {
+                     background-color: transparent;
+                     width: 100%;
+                     perspective: 1000px;
+              }
+
+              .flip-card1-inner {
+                     position: relative;
+                     width: 100%;
+                     height: 28%;
+                     text-align: center;
+                     transition: transform 0.5s;
+                     transform-style: preserve-3d;
+              }
+
+              .flip-card1:hover .flip-card1-inner {
+                     transform: rotateY(35deg);
+              }
+
+              .flip-card1-front {
+                     background-color: #bbb;
+                     color: black;
+              }
+
+
+              .flip-card2 {
+                     background-color: transparent;
+                     width: 100%;
+                     perspective: 1000px;
+              }
+
+              .flip-card2-inner {
+                     position: relative;
+                     width: 100%;
+                     height: 25%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                    
+              }
+
+              .flip-card2:hover .flip-card2-inner {
+                     transform: rotateX(-90deg);
+              }
+
+              .flip-card2-front,
+              .flip-card2-back {
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     -webkit-backface-visibility: hidden;
+                     backface-visibility: hidden;
+              }
+
+              .flip-card2-front {
+                     background-color: transparent;
+                     color: black;
+              }
+
+              .flip-card2-back {
+                     background-color: transparent;
+                     color: white;
+                     transform: rotateX(90deg);
+              }
+
+              .flip-card3 {
+                     background-color: transparent;
+                     width: 100%;
+                     perspective: 1000px;
+              }
+
+              .flip-card3-inner {
+                     position: relative;
+                     width: 100%;
+                     height: 28%;
+                     text-align: center;
+                     transition: transform 0.5s;
+                     transform-style: preserve-3d;
+              }
+
+              .flip-card3:hover .flip-card3-inner {
+                     transform: rotateY(-35deg);
+              }
+
+              .flip-card3-front {
+                     background-color: #bbb;
+                     color: black;
+              }
+
+              .flip-card4 {
+                     background-color: transparent;
+                     width: 100%;
+                     height: 300px;
+                     perspective: 1000px;
+              }
+
+              .flip-card4-inner {
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              }
+
+              .flip-card4:hover .flip-card4-inner {
+                     transform: rotateY(180deg);
+              }
+
+              .flip-card4-front,
+              .flip-card4-back {
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     -webkit-backface-visibility: hidden;
+                     backface-visibility: hidden;
+              }
+
+              .flip-card4-front {
+                     background-color: #bbb;
+                     color: black;
+              }
+
+              .flip-card4-back {
+                     background-color: #2980b9;
+                     color: white;
+                     transform: rotateY(180deg);
+              }
+
+              .flip-card5 {
+                     background-color: transparent;
+                     width: 100%;
+                     height: 300px;
+                     perspective: 1000px;
+              }
+
+              .flip-card5-inner {
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              }
+
+              .flip-card5:hover .flip-card5-inner {
+                     transform: rotateX(180deg);
+              }
+
+              .flip-card5-front,
+              .flip-card5-back {
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     -webkit-backface-visibility: hidden;
+                     backface-visibility: hidden;
+              }
+
+              .flip-card5-front {
+                     background-color: #bbb;
+                     color: black;
+              }
+
+              .flip-card5-back {
+                     background-color: #2980b9;
+                     color: white;
+                     transform: rotateX(180deg);
+              }
+
+              .flip-card6 {
+                     background-color: transparent;
+                     width: 100%;
+                     height: 300px;
+                     perspective: 1000px;
+              }
+
+              .flip-card6-inner {
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              }
+
+              .flip-card6:hover .flip-card6-inner {
+                     transform: rotateY(-180deg);
+              }
+
+              .flip-card6-front,
+              .flip-card6-back {
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     -webkit-backface-visibility: hidden;
+                     backface-visibility: hidden;
+              }
+
+              .flip-card6-front {
+                     background-color: #bbb;
+                     color: black;
+              }
+
+              .flip-card6-back {
+                     background-color: #2980b9;
+                     color: white;
+                     transform: rotateY(180deg);
+              }
+       </style>
+
+
+
+
+
+       <style>
+              .hero-image {
+                     background: url(https://www.teahub.io/photos/full/324-3242929_log-cabin-facebook-cover.jpg) no-repeat center;
+                     background-size: cover;
+                     height: 350px;
+                     position: relative;
+                     background-position: center;
+              }
+
+       </style>
+
+
+
+
+
+       <style>
+              .header-margin {
+                     margin: 10px 2px -10px;
+                     border: 3px solid red;
+              }
+
+              .buttons-margin {
+                     margin: 20px 50px 10px;
+                     border: 3px solid red;
+              }
+
+              .margin1 {
+                     margin: 20px 340px 1px;
+
+                     background-color:rgba(0, 0, 0, 0.582) ;
+              }
+
+              .margin2 {
+                     margin: 50px 10px 10px;
+                     border: 1px solid red;
+              }
+       </style>
+
+
+
+
+
+
+
+       <style>
+              .box {
+                     padding: -1px;
+                     text-align: center;
+                     background: url("https://wallpaperaccess.com/full/1329174.jpg");
+
+                     background-position: center bottom;
+                     width: 100%;
+                     margin: 0px;
+                     border: 1px solid transparent;
+                     background-size: cover;
+              }
+
+              .box1 {
+                     padding: -1px;
+                     text-align: center;
+                     background: url("https://wallpaperaccess.com/full/1329174.jpg");
+
+                     background-position: center top;
+                     width: 100%;
+                     margin: 0px;
+                     border: 1px solid transparent;
+                     background-size: cover;
+              }
+
+              .box2 {
+                     padding: -1px;
+                     text-align: center;
+                     background: url("https://wallpaperaccess.com/full/1329174.jpg");
+
+                     background-position: center bottom;
+                     width: 100%;
+                     margin: 0px;
+                     border: 1px solid transparent;
+                     background-size: cover;
+              }
+
+              .box3 {
+                     padding: -1px;
+                     text-align: center;
+                     background-position: center top;
+                   
+
+                     margin: 0px;
+                     background-size: cover;
+                     border: 1px solid red;
+
+                     background-repeat: no-repeat;
+                     background-image: url("https://wallpaperaccess.com/full/1126773.jpg");
+              }
+
+       </style>
+
+
+
+
+
+
+       <style>
+              #object1 {
+                     float: left;
+                     border-style: solid;
+                     border-width: 3px;
+                     border-color: white;
+              }
+
+
+              #object3 {
+                     float: right;
+                     border-style: solid;
+                     border-width: 3px;
+                     border-color: white;
+              }
+       </style>
+
+
+
+
+
+       <style>
+              * {
+                     box-sizing: border-box;
+              }
+
+              /* Float four columns side by side */
+              .column1 {
+                     float: left;
+                     width: 33.33%;
+                     padding: 5px;
+              }
+
+
+
+              .column4 {
+                     float: left;
+                     width: 25%;
+                     padding: 10px;
+              }
+
+              .column5 {
+                     float: left;
+                     width: 50%;
+                     padding: 5px;
+              }
+
+              .column6 {
+                     float: left;
+                     width: 20%;
+                     padding: 20px;
+              }
+
+              /* Remove extra left and right margins, due to padding */
+              .row {
+                     margin: 0 -5px;
+              }
+
+              /* Clear floats after the columns */
+              .row:after {
+                     content: "";
+                     display: table;
+                     clear: both;
+              }
+
+              /* Responsive columns */
+              @media screen and (max-width: 700px) {
+
+
+                     .column4 {
+                            width: 50%;
+                            display: block;
+                            margin-bottom: 20px;
+                     }
+
+                     .column6 {
+                            width: 100%;
+                            display: block;
+                            margin-bottom: 20px;
+                     }
+              }
+
+              /* Style the counter cards */
+              .card {
+                     padding: 10px;
+                     text-align: center;
+                     background-color: transparent;
+              }
+       </style>
+
+
+       <style>
+              #image4 {
+                     border-radius: 50px;
+              }
+
+              #image5 {
+                     border-radius: 10px 10px 10px 10px;
+              }
+       </style>
+
+
+
+       <style>
+              .button {
+                     background-color: #4CAF50;
+                     /* Green */
+                     border: none;
+                     color: white;
+                     padding: 16px 32px;
+                     text-align: center;
+                     text-decoration: none;
+                     display: inline-block;
+                     font-size: 50px bold;
+                     margin: 2px;
+                     width: 100%;
+                     transition-duration: 0.4s;
+                     cursor: pointer;
+              }
+
+
+              .button1 {
+                     background-color: transparent;
+                     color: #00ff00;
+                     border: 2px solid #00ff00b9;
+              }
+
+              .button1:hover {
+                     background-color: #00ff1548;
+                     color: white;
+              }
+
+              .button2 {
+                     background-color: transparent;
+                     color: white;
+                     border: 2px solid white;
+              }
+
+              .button2:hover {
+                     background-color: #0000009a;
+                     color: white;
+              }
+
+              .button3 {
+                     background-color: transparent;
+                     color: #ff8080;
+                     border: 2px solid #ff8080;
+              }
+
+              .button3:hover {
+                     background-color: #ff8080a4;
+                     color: white;
+              }
+
+              .button4 {
+                     background-color: transparent;
+                     color: white;
+                     border: 2px solid white;
+              }
+
+              .button4:hover {
+                     background-color: #0000009a;
+                     color: white;
+              }
+
+              .button5 {
+                     background-color: transparent;
+                     color: #00ff00;
+                     border: 2px solid #00ff00b9;
+              }
+
+              .button5:hover {
+                     background-color: #00ff1548;
+                     color: white;
+              }
+       
+       </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body bgcolor="white">
+
+       <div class="row">
+              
+              
+              <div class="hero-image">
+                     <div class="column1">
+                            <div class="card">
+                                   <div class="row">
+                                          <div class="column5">
+                                                 <div class="card">
+                                                        <div class="flip-card1">
+                                                               <div class="flip-card1-inner">
+                                                                      <div class="flip-card1-front">
+                                                                             <img id="object1" src="G.gif" alt="Logo"
+                                                                                    style="width:100%;">
+                                                                      </div>
+                                                               </div>
+                                                        </div>
+                                                 </div>
+                                          </div>
+                                          <div class="column5">
+                                                 <div class="card">
+                                                 </div>
+                                          </div>
+                                   </div>
+
+                            </div>
+                     </div>
+
+                     <div class="column1">
+                            <div class="card">
+                                   <div class="row">
+                                          <div class="flip-card2">
+                                                 <div class="flip-card2-inner">
+                                                        <div class="flip-card2-front">
+                                                               <img src="Griham E.png" alt="Name" style="width:100%;">
+                                                        </div>
+                                                        <div class="flip-card2-back">
+                                                               <img src="Griham.png" alt="Name hindi"
+                                                                      style="width:100%;">
+                                                        </div>
+                                                 </div>
+                                          </div>
+                                   </div>
+                            </div>
+                     </div>
+
+                     <div class="column1">
+                            <div class="card">
+                                   <div class="row">
+                                          <div class="column5">
+                                                 <div class="card">
+                                                 </div>
+                                          </div>
+                                          <div class="column5">
+                                                 <div class="card">
+                                                        <div class="flip-card3">
+                                                               <div class="flip-card3-inner">
+                                                                      <div class="flip-card3-front">
+                                                                             <img id="object3" src="G.gif" alt="logo"
+                                                                                    style="width:100%;">
+                                                                      </div>
+                                                               </div>
+                                                        </div>
+                                                 </div>
+                                          </div>
+                                   </div>
+
+                            </div>
+                     </div>
+
+
+
+                     <div class="box1">
+                     
+                            </div class="button-margin">
+                     
+                                   <div class="column6">
+                                          <div class="card">
+                                                 <a href="Buy.html" class="button button1">
+                                                      <font size=4> Buy </font>
+                                                 </a>
+                                          </div>
+                                   </div>
+
+                                   <div class="column6">
+                                          <div class="card">
+                                                 <a href="Rent.html" class="button button2">
+                                                      <font size=4> Rent </font>
+                                            </a>
+                                          </div>
+                                    </div>
+
+                                   <div class="column6">
+                                          <div class="card">
+                                                 <a href="Sell.html" class="button button3">
+                                                        <font size=4> Sell </font>
+                                                  </a>
+                                          </div>
+                                    </div>
+
+                                   <div class="column6">
+                                          <div class="card">
+                                                 <a href="Contact.html" class="button button4">
+                                                     <font size=4> Contact Us </font>
+                                                 </a>
+                                           </div>
+                                   </div>
+
+                                   <div class="column6">
+                                          <div class="card">
+                                                 <a href="Signup.html" class="button button5">
+                                                        <font size=4> Signup </font>
+                                                 </a>
+                                          </div>
+                                   </div>
+
+                            </div>
+
+                     </div>
+              </div>
+              
+
+
+              <div class="box3">
+
+                     
+
+                     <div class="margin1">
+                              
+                                   
+                                          
+
+
+
+
+
+                            <center>
+                                          <br>
+
+
+                                          <H2><font color= #66ffff>Contact Details</font></H2>
+                                         
+                                          <br>
+
+                                          <p><font color= #66ffff>Email</font></p>
+                                          <p><font color= #66ffff>grihamhousingcompany@gmail.com</font></p>
+                                          <br>
+                                          <p><font color= #66ffff>Contact Number</font></p>
+                                          <p><font color= #66ffff>+91 0123456789</font></p>
+                                          <p><font color= #66ffff>+91 9876543210</font></p>
+                                          <br>
+                                          <p><font color= #66ffff>Facebook Page</font></p>
+                                          <p><font color= #66ffff>Griham Housing Company</font></p>
+                                          <br>
+                                          <p><font color= #66ffff>Twitter Handle</font></p>
+                                          <p><font color= #66ffff>Griham Housing Company</font></p>
+                                          <br>
+                                          <p><font color= #66ffff>Instagram Handle</font></p>
+                                          <p><font color= #66ffff>GHC_7303</font></p>
+                                          <br>
+
+                                         
+                            </center>
+                            <br>
+                     </div>
+                     
+              </div>
+
+     
+
+
+
+              <H3 align=center><font color="black"> What makes us preferred choice </font></H3>
+
+              <div class="column4">
+                     <div class="card">
+                            <img id="image4" src="Maximum Choices.gif" alt="maximum choices image" height="100" />
+                            <h4><font color="black"> Maximum Choices </font></h4>
+                     </div>
+              </div>
+
+              <div class="column4">
+                     <div class="card">
+                            <img id="image5" src="Buyers Trust Us.gif" alt="buyers trust us image" height="100" />
+                            <h4><font color="black"> Buyers Trust Us </font></h4>
+                     </div>
+              </div>
+
+              <div class="column4">
+                     <div class="card">
+                            <img src="Seller Prefer Us.gif" alt="seller prefer us image" height="100" />
+                            <h4><font color="black"> Seller Prefer Us </font></h4>
+                     </div>
+              </div>
+
+              <div class="column4">
+                     <div class="card">
+                            <img src="Expert Guidance.png" alt="expert guidance image " height="100" />
+                            <h4><font color="black"> Expert Guidance </font></h4>
+                     </div>
+              </div>
+
+       </div>
+
+
+</body>
+
+</html>
